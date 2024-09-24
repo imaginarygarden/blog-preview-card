@@ -33,9 +33,9 @@ body {
 main {
     background: hsl(0, 0%, 100%);
     border-radius: 1.25rem;
-    max-width: 23.5rem;
-    padding: 1.5rem;
-    font-size: 1rem;
+    max-width: clamp(20.5rem, 50vw, 23.5rem);
+    padding: clamp(1.4rem, 2vw, 1.5rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
     box-shadow: 8px 8px 0px 0px #000000;
     border: 1px solid black;
 }
@@ -64,7 +64,12 @@ main {
 }
 
 .title {
-    font-size: 1.5em;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+}
+
+.title:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
 }
 
 .date, .title {
@@ -88,19 +93,5 @@ main {
 
 .author-name {
     margin-left: 0.625em;
-    font-size: 1em;
-}
-
-@media screen and (max-width: 400px) {
-    main {
-        max-width: 20.5rem;
-        font-size: 0.9rem;
-        padding: 1.4rem;
-    }
-    /* .title {
-        font-size: 1.3em;
-    } */
-    /* .description {
-        font-size: 0.89rem
-    } */
+    font-size: clamp(1rem, 2vw, 0.9rem);;
 }
